@@ -16,14 +16,19 @@ body{
 }
 
 .container{
-    
-    height: 500px;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     margin: auto;
+
+    /* ❌ quitamos la altura fija */
+    /* max-height: 500px; */
+    /* height: 100%; */
+
     background: #000000ad;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
+
 .card{
     display: flex;
     flex-direction: column;
@@ -38,4 +43,23 @@ body{
 }
 .texto{
     margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .titulo {
+        font-size: 1.6rem;
+    }
+
+    .texto {
+        font-size: 1rem;
+    }
 }
